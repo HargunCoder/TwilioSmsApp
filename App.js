@@ -1,9 +1,16 @@
 import React,{Component} from 'react';
-import {Text, AppRegistry} from 'react-native';
-import Header from './src/Common/Header.js';
+import {Text,View, AppRegistry} from 'react-native';
+import LoginForm from './src/LoginForm';
+import {Header, Button} from './src/Common';
+
 export default class Main extends Component{
   render(){
-    return(<Header title='Hello' />);
+    return(
+      <View>
+       <Header title='Login' />
+       <LoginForm />
+      </View>
+    );
   }
 }
 AppRegistry.registerComponent('twilio',()=>Main);

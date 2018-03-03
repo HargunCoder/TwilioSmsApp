@@ -3,10 +3,10 @@ import { Text, View } from 'react-native';
 
 class Header extends Component {
   render (){
-    const { textSyle, viewStyle} = styles;
+const { viewStyle, textStyle } = styles;
     return (
-      <View style={ viewStyle }>
-        <Text>{this.props.title}</Text>
+      <View style = {viewStyle}>
+        <Text style= {textStyle}>{this.props.title}</Text>
       </View>
     );
   }
@@ -21,10 +21,11 @@ const styles={
     elevation: 2,
     position: 'relative'
   },
-  textSyle{
-    fonstSize: 25
+  textStyle: {
+    fontSize: 25,
+    color: '#000'
   }
 
 };
 
-export default Header;
+export { Header };
